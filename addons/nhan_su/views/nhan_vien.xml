@@ -62,6 +62,9 @@
                     <field name="tuoi"/>
                     <field name="que_quan"/>
                     <field name="email"/>
+                    <field name="so_a"/>
+                    <field name="so_b"/>
+                    <field name="tong_ab"/>
                 </search>
             </field>
         </record>

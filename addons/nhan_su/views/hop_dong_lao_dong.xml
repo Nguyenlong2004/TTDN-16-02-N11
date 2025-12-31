@@ -1,0 +1,45 @@
+<odoo>
+
+    <!-- TREE VIEW -->
+    <record id="view_hop_dong_lao_dong_tree" model="ir.ui.view">
+        <field name="name">hop.dong.lao.dong.tree</field>
+        <field name="model">hop_dong_lao_dong</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="so_hop_dong"/>
+                <field name="nhan_vien_id"/>
+                <field name="loai_hop_dong"/>
+                <field name="ngay_bat_dau"/>
+                <field name="ngay_ket_thuc"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- FORM VIEW -->
+    <record id="view_hop_dong_lao_dong_form" model="ir.ui.view">
+        <field name="name">hop.dong.lao.dong.form</field>
+        <field name="model">hop_dong_lao_dong</field>
+        <field name="arch" type="xml">
+            <form string="Hợp đồng lao động">
+                <sheet>
+                    <group>
+                        <field name="so_hop_dong"/>
+                        <field name="nhan_vien_id"/>
+                        <field name="loai_hop_dong"/>
+                        <field name="ngay_bat_dau"/>
+                        <field name="ngay_ket_thuc"/>
+                        <field name="muc_luong"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="action_hop_dong_lao_dong" model="ir.actions.act_window">
+        <field name="name">Hợp đồng lao động</field>
+        <field name="res_model">hop_dong_lao_dong</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

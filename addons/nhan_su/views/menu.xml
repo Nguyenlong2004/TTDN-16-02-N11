@@ -46,8 +46,17 @@
         <menuitem name="Danh sách chứng chỉ, bằng cấp" 
             id="menu_danh_sach_chung_chi_bang_cap" 
             parent="menu_root" 
-            sequence="4"
+            sequence="5"
             action="action_danh_sach_chung_chi_bang_cap"
         />
+        <!-- QUẢN LÝ HỢP ĐỒNG LAO ĐỘNG -->
+        <menuitem
+            id="menu_hop_dong_lao_dong"
+            name="Hợp đồng lao động"
+            parent="menu_root"
+            sequence="6"
+            action="action_hop_dong_lao_dong"
+        />
+        
     </data>
 </odoo>
