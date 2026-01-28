@@ -55,15 +55,19 @@ Hệ thống tích hợp các phân hệ quản lý tài sản, quản lý phòn
 - Hỗ trợ check-in sử dụng phòng họp theo thực tế.
 - Thống kê, báo cáo tần suất và hiệu quả sử dụng phòng họp.
 
+⚙️ Phân hệ Nhân Sự
+- Quản lý hồ sơ nhân viên, chức vụ, đơn vị công tác
+- Theo dõi lịch sử công tác, chứng chỉ, bằng cấp
+- Quản lý quy trình tuyển dụng, đào tạo, đánh giá
 
 
-<h1 align="center">HỆ THỐNG QUẢN LÝ TÀI SẢN & PHÒNG HỌP</h1>
+<h1 align="center">🏢 HỆ THỐNG QUẢN LÝ TÀI SẢN & PHÒNG HỌP</h1>
 
 <!-- ======================= -->
 <!-- PHÂN HỆ QUẢN LÝ TÀI SẢN -->
 <!-- ======================= -->
 
-<h2>Phân hệ Quản lý Tài sản</h2>
+<h2>🧰 Phân hệ Quản lý Tài sản</h2>
 <p>
 Phân hệ Quản lý Tài sản cho phép quản lý toàn diện vòng đời tài sản
 từ khâu mua sắm, cấp phát, sử dụng, bảo trì cho đến thanh lý và thống kê báo cáo.
@@ -72,12 +76,12 @@ từ khâu mua sắm, cấp phát, sử dụng, bảo trì cho đến thanh lý 
 <table width="100%" cellpadding="12">
   <tr>
     <td width="50%" align="center">
-      <b>Danh sách Tài sản</b><br/>
+      <b>📋 Danh sách Tài sản</b><br/>
       <img src="IMAGE_TAISAN_1.png" width="100%"/><br/>
       <i>Quản lý thông tin chi tiết từng tài sản</i>
     </td>
     <td width="50%" align="center">
-      <b>Quản lý Vị trí</b><br/>
+      <b>📍 Quản lý Vị trí</b><br/>
       <img src="IMAGE_TAISAN_2.png" width="100%"/><br/>
       <i>Theo dõi vị trí, sơ đồ bố trí tài sản</i>
     </td>
@@ -85,12 +89,12 @@ từ khâu mua sắm, cấp phát, sử dụng, bảo trì cho đến thanh lý 
 
   <tr>
     <td width="50%" align="center">
-      <b>Mượn / Trả Tài sản</b><br/>
+      <b>🤝 Mượn / Trả Tài sản</b><br/>
       <img src="IMAGE_TAISAN_3.png" width="100%"/><br/>
       <i>Quản lý quy trình mượn – trả tài sản</i>
     </td>
     <td width="50%" align="center">
-      <b>Thống kê & Báo cáo</b><br/>
+      <b>📊 Thống kê & Báo cáo</b><br/>
       <img src="IMAGE_TAISAN_4.png" width="100%"/><br/>
       <i>Thống kê số lượng, trạng thái và hiệu quả sử dụng tài sản</i>
     </td>
@@ -103,7 +107,7 @@ từ khâu mua sắm, cấp phát, sử dụng, bảo trì cho đến thanh lý 
 <!-- PHÂN HỆ QUẢN LÝ PHÒNG HỌP -->
 <!-- ======================= -->
 
-<h2>Phân hệ Quản lý Phòng họp</h2>
+<h2>🏢 Phân hệ Quản lý Phòng họp</h2>
 <p>
 Phân hệ Quản lý Phòng họp hỗ trợ điều phối lịch sử dụng phòng họp
 như một tài sản dùng chung, đảm bảo sử dụng hiệu quả, tránh trùng lịch
@@ -113,12 +117,12 @@ và xử lý sự cố kịp thời.
 <table width="100%" cellpadding="12">
   <tr>
     <td width="50%" align="center">
-      <b>Danh sách Phòng họp</b><br/>
+      <b>🏷️ Danh sách Phòng họp</b><br/>
       <img src="IMAGE_PHONG_1.png" width="100%"/><br/>
       <i>Quản lý thông tin phòng họp, sức chứa, trạng thái</i>
     </td>
     <td width="50%" align="center">
-      <b>Vị trí Phòng họp</b><br/>
+      <b>📍 Vị trí Phòng họp</b><br/>
       <img src="IMAGE_PHONG_2.png" width="100%"/><br/>
       <i>Xác định vị trí phòng theo tòa nhà, tầng</i>
     </td>
@@ -126,12 +130,12 @@ và xử lý sự cố kịp thời.
 
   <tr>
     <td width="50%" align="center">
-      <b>Đơn Mượn / Đặt Phòng</b><br/>
+      <b>📝 Đơn Mượn / Đặt Phòng</b><br/>
       <img src="IMAGE_PHONG_3.png" width="100%"/><br/>
       <i>Đăng ký, phê duyệt và quản lý thời gian sử dụng phòng</i>
     </td>
     <td width="50%" align="center">
-      <b>Lịch sử Đặt Phòng</b><br/>
+      <b>🕒 Lịch sử Đặt Phòng</b><br/>
       <img src="IMAGE_PHONG_4.png" width="100%"/><br/>
       <i>Theo dõi lịch sử sử dụng phòng họp theo thời gian</i>
     </td>
@@ -139,17 +143,43 @@ và xử lý sự cố kịp thời.
 
   <tr>
     <td width="50%" align="center">
-      <b>Sự cố Phòng họp</b><br/>
+      <b>⚠️ Sự cố Phòng họp</b><br/>
       <img src="IMAGE_PHONG_5.png" width="100%"/><br/>
       <i>Ghi nhận sự cố và gợi ý phòng trống thay thế</i>
     </td>
     <td width="50%" align="center">
-      <b>Thống kê Phòng họp</b><br/>
+      <b>📈 Thống kê Phòng họp</b><br/>
       <img src="IMAGE_PHONG_6.png" width="100%"/><br/>
       <i>Thống kê tần suất sử dụng và hiệu quả khai thác phòng</i>
     </td>
   </tr>
 </table>
+
+🏗️ Kiến trúc Hệ thống
+Hệ thống Quản lý Tài sản & Phòng họp được xây dựng theo kiến trúc Client – Server kết hợp mô hình MVC, phát triển trên nền tảng Odoo ERP mã nguồn mở.
+
+🔹 Tổng quan kiến trúc
+- Frontend (Client):
+Người dùng truy cập hệ thống thông qua trình duyệt web. Giao diện được xây dựng bằng XML, HTML, CSS và JavaScript theo chuẩn Odoo Web.
+- Backend (Server):
+- Odoo Server xử lý toàn bộ logic nghiệp vụ, phân quyền người dùng và luồng xử lý dữ liệu. Các phân hệ như Quản lý tài sản và Quản lý phòng họp được triển khai dưới dạng module độc lập, dễ mở rộng và bảo trì.
+- Cơ sở dữ liệu (Database):
+- Sử dụng PostgreSQL để lưu trữ dữ liệu tài sản, phòng họp, lịch sử mượn – trả, bảo trì, thống kê và báo cáo.
+
+🔹 Mô hình MVC trong hệ thống
+Model:
+- Quản lý dữ liệu và nghiệp vụ (tài sản, phòng họp, lịch sử sử dụng, thống kê…).
+View:
+- Giao diện hiển thị dữ liệu cho người dùng (danh sách, form, báo cáo, biểu đồ).
+Controller:
+- Điều phối luồng xử lý giữa Model và View, tiếp nhận yêu cầu từ người dùng.
+
+🔹 Ưu điểm kiến trúc
+- Dễ mở rộng, dễ tích hợp thêm module mới
+- Phù hợp cho đào tạo, thực tập và triển khai thực tế
+- Tách biệt rõ ràng giữa giao diện, xử lý nghiệp vụ và dữ liệu
+- Đảm bảo tính ổn định, bảo mật và hiệu quả vận hành
+
 
 ## ⚙️ 4. Cài đặt
 
