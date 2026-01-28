@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM VIEW -->
+        <record id="view_lich_su_dat_phong_form" model="ir.ui.view">
+            <field name="name">lich_su_dat_phong_form</field>
+            <field name="model">lich_su_dat_phong</field>
+            <field name="arch" type="xml">
+                <form string="Lịch sử đặt phòng">
+                    <sheet>
+                        <group>
+                            <field name="phong_hop_id"
+                                   options="{'no_create': True}"/>
+                            <field name="vi_tri_id" readonly="1"/> <!-- ✅ VỊ TRÍ -->
+                            <field name="nhan_vien_id"/>
+                            <field name="thoi_gian_bat_dau"/>
+                            <field name="thoi_gian_ket_thuc"/>
+                            <field name="trang_thai"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE VIEW -->
+        <record id="view_lich_su_dat_phong_tree" model="ir.ui.view">
+            <field name="name">lich_su_dat_phong_tree</field>
+            <field name="model">lich_su_dat_phong</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="phong_hop_id"/>
+                    <field name="vi_tri_id"/> 
+                    <field name="nhan_vien_id"/>
+                    <field name="thoi_gian_bat_dau"/>
+                    <field name="thoi_gian_ket_thuc"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- SEARCH VIEW -->
+        <record id="lich_su_dat_phong_search" model="ir.ui.view">
+            <field name="model">lich_su_dat_phong</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="phong_hop_id"/>
+                    <field name="vi_tri_id"/> 
+                    <field name="nhan_vien_id"/>
+                    <field name="thoi_gian_bat_dau"/>
+                    <field name="thoi_gian_ket_thuc"/>
+                    <field name="trang_thai"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_lich_su_dat_phong" model="ir.actions.act_window">
+            <field name="name">Lịch Sử Đặt Phòng</field>
+            <field name="res_model">lich_su_dat_phong</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="lich_su_dat_phong_search"/>
+        </record>
+
+    </data>
+</odoo>

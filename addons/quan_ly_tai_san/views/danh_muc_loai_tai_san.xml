@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- FORM VIEW -->
+        <record id="view_danh_muc_loai_tai_san_form" model="ir.ui.view">
+            <field name="name">danh_muc_loai_tai_san_form</field>
+            <field name="model">danh_muc_loai_tai_san</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                    
+                        <div class="oe_read_only" style="font-size:25px">Danh mục tài sản</div>
+                        <group col="4" string="Thông tin loại tài sản">
+                            <field name="ma_loai_tai_san"/>
+                            <field name="ten_loai_tai_san"/>
+                            <field name="nhom_tai_san_id"/>
+                            <field name="phuong_thuc_khau_hao"/>
+                            <field name="thoi_gian_khau_hao"/>
+                            <field name="ty_le_khau_hao" readonly="1"/>
+                            <field name="mo_ta"/>
+                        </group>
+                        <notebook>
+                            <page string="Danh sách tài sản">
+                                <field name="tai_san_ids">
+                                    <tree>
+                                        <field name="ma_tai_san"/>
+                                        <field name="ten_tai_san"/>
+                                        <field name="trang_thai"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE VIEW -->
+        <record id="view_danh_muc_loai_tai_san_tree" model="ir.ui.view">
+            <field name="name">danh_muc_loai_tai_san_tree</field>
+            <field name="model">danh_muc_loai_tai_san</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_loai_tai_san"/>
+                    <field name="ten_loai_tai_san"/>
+                    <field name="nhom_tai_san_id"/>
+                    <field name="phuong_thuc_khau_hao"/>
+                    <field name="thoi_gian_khau_hao"/>
+                    <field name="ty_le_khau_hao"/>
+                    
+                </tree>
+            </field>
+        </record>
+
+        <!-- SEARCH VIEW -->
+        <record model="ir.ui.view" id="danh_muc_loai_tai_san_search">
+            <field name="name">danh_muc_loai_tai_san_search</field>
+            <field name="model">danh_muc_loai_tai_san</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ma_loai_tai_san"/>
+                    <field name="ten_loai_tai_san"/>
+                    <field name="nhom_tai_san_id"/>
+                    <field name="phuong_thuc_khau_hao"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_danh_muc_loai_tai_san" model="ir.actions.act_window">
+            <field name="name">Danh mục loại tài sản</field>
+            <field name="res_model">danh_muc_loai_tai_san</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="danh_muc_loai_tai_san_search"/>
+        </record>
+        
+        
+    </data>
+</odoo>

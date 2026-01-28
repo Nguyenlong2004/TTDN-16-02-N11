@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_bao_tri_form" model="ir.ui.view">
+            <field name="name">bao_tri</field>
+            <field name="model">bao_tri</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Chức Vụ</div>
+                        <group col="5" string="Thông tin chung">
+                            <field name="ma_bao_tri"/>
+                            <field name="tai_san_id"/>
+                            <field name="ten_tai_san" readonly="1"/>
+                            <field name="ngay_bao_tri"/>
+                            <field name="noi_dung_bao_tri"/>
+                            <field name="chi_phi_bao_tri"/>
+                            <field name="nha_cung_cap_id"/>
+                            <field name="tinh_trang"/>
+                            <field name="ghi_chu"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+         <record id="view_bao_tri_tree" model="ir.ui.view">
+            <field name="name">bao_tri</field>
+            <field name="model">bao_tri</field>
+            <field name="arch" type="xml">
+                <tree >
+                    <field name="ma_bao_tri"/>
+                    <field name="tai_san_id"/>
+                    <field name="ten_tai_san" readonly="1"/>
+                    <field name="ngay_bao_tri"/>
+                    <field name="noi_dung_bao_tri"/>
+                    <field name="chi_phi_bao_tri"/>
+                    <field name="nha_cung_cap_id"/>
+                    <field name="tinh_trang" decoration-success="tinh_trang == 'da_xong'" decoration-warning="tinh_trang == 'dang_cho_duyet'" decoration-danger="tinh_trang == 'dang_bao_tri'"/>
+                    <field name="ghi_chu"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="bao_tri_search">
+            <field name="model">bao_tri</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ma_bao_tri"/>
+                    <field name="tai_san_id"/>
+                    <field name="ten_tai_san" readonly="1"/>
+                    <field name="ngay_bao_tri"/>
+                    <field name="noi_dung_bao_tri"/>
+                    <field name="chi_phi_bao_tri"/>
+                    <field name="nha_cung_cap_id"/>
+                    <field name="tinh_trang"/>
+                    <field name="ghi_chu"/>
+                    
+                </search>
+            </field>
+        </record>
+
+        <record id="action_bao_tri" model="ir.actions.act_window">
+            <field name="name">Quản lý bảo trì tài sản</field>
+            <field name="res_model">bao_tri</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "bao_tri_search"/>
+        </record>
+    </data>
+</odoo>
+        
+    

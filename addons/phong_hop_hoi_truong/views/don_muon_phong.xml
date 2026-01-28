@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="view_don_muon_phong_form" model="ir.ui.view">
+            <field name="name">don_muon_phong_form</field>
+            <field name="model">don_muon_phong</field>
+            <field name="arch" type="xml">
+                <form string="Đơn Mượn Phòng">
+                    <sheet>
+                        <group>
+                            <field name="ten_don_muon"/>
+                            <field name="phong_hop_id" string="Phòng họp" options="{'no_create': True}" domain="[('trang_thai', '=', 'available')]"/>
+                            <field name="nhan_vien_id"/>
+                        </group>
+                        <group string="Thời gian mượn phòng">
+                            <field name="thoi_gian_bat_dau"/>
+                            <field name="thoi_gian_ket_thuc"/>
+                        </group>
+                        <group string="Trạng thái &amp; Mục đích">
+                            <field name="trang_thai"/>
+                            <field name="muc_dich_su_dung"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button string="Xác nhận" type="object" name="action_confirm" class="btn-primary"/>
+                        <button string="Hủy" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_don_muon_phong_tree" model="ir.ui.view">
+            <field name="name">don_muon_phong_tree</field>
+            <field name="model">don_muon_phong</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ten_don_muon"/>
+                    <field name="phong_hop_id"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="thoi_gian_bat_dau"/>
+                    <field name="thoi_gian_ket_thuc"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="don_muon_phong_search" model="ir.ui.view">
+            <field name="model">don_muon_phong</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ten_don_muon"/>
+                    <field name="phong_hop_id"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="trang_thai"/>
+                    <filter name="pending" string="Chờ xác nhận" domain="[('trang_thai', '=', 'pending')]"/>
+                    <filter name="confirmed" string="Đã xác nhận" domain="[('trang_thai', '=', 'confirmed')]"/>
+                    <filter name="cancelled" string="Đã hủy" domain="[('trang_thai', '=', 'cancelled')]"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_don_muon_phong" model="ir.actions.act_window">
+            <field name="name">Đơn Mượn Phòng</field>
+            <field name="res_model">don_muon_phong</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="don_muon_phong_search"/>
+        </record>
+    </data>
+</odoo>

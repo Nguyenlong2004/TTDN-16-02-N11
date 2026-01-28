@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="view_lich_su_dieu_chuyen_tai_san_form" model="ir.ui.view">
+            <field name="name">lich_su_dieu_chuyen_tai_san_form_view</field>
+            <field name="model">lich_su_dieu_chuyen_tai_san</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:45px; text-align:center; margin-bottom:10px;">
+                            Lịch sử điều chuyển tài sản
+                        </div>
+                        <group col="2" string="Thông tin chung">
+                            <field name="dieu_chuyen_tai_san_id" readonly="1"/>
+                            <field name="ma_dieu_chuyen"/>
+                            <field name="tai_san_id"/>
+                            <field name="ten_tai_san"/>
+                            <field name="tu_dia_diem"/>
+                            <field name="den_dia_diem"/>
+                            <field name="trang_thai"/>
+                            <field name="ghi_chu"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <!-- Tree View -->
+        <record id="view_lich_su_dieu_chuyen_tai_san_tree" model="ir.ui.view">
+            <field name="name">lich_su_dieu_chuyen_tai_san_tree_view</field>
+            <field name="model">lich_su_dieu_chuyen_tai_san</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="dieu_chuyen_tai_san_id" readonly="1"/>
+                    <field name="ma_dieu_chuyen"/>
+                    <field name="tai_san_id"/>
+                    <field name="ten_tai_san"/>
+                    <field name="tu_dia_diem"/>
+                    <field name="den_dia_diem"/>
+                    <field name="trang_thai"/>
+                    <field name="ghi_chu"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Graph View -->
+        <record id="view_lich_su_dieu_chuyen_tai_san_graph" model="ir.ui.view">
+            <field name="name">lich_su_dieu_chuyen_tai_san_graph_view</field>
+            <field name="model">lich_su_dieu_chuyen_tai_san</field>
+            <field name="arch" type="xml">
+                <graph string="Biểu đồ điều chuyển tài sản" type="bar">
+                    <field name="tai_san_id" type="row"/>
+                    <field name="trang_thai" type="measure"/>
+                </graph>
+            </field>
+        </record>
+        
+        <!-- Search View -->
+        <record id="lich_su_dieu_chuyen_tai_san_search" model="ir.ui.view">
+            <field name="name">lich_su_dieu_chuyen_tai_san_search_view</field>
+            <field name="model">lich_su_dieu_chuyen_tai_san</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="dieu_chuyen_tai_san_id" readonly="1"/>
+                    <field name="ma_dieu_chuyen"/>
+                    <field name="tai_san_id"/>
+                    <field name="ten_tai_san"/>
+                    <field name="tu_dia_diem"/>
+                    <field name="den_dia_diem"/>
+                    <field name="trang_thai"/>
+                    <field name="ghi_chu"/>
+                </search>
+            </field>
+        </record>
+        
+        <!-- Action -->
+        <record id="action_lich_su_dieu_chuyen_tai_san" model="ir.actions.act_window">
+            <field name="name">Lịch sử điều chuyển tài sản</field>
+            <field name="res_model">lich_su_dieu_chuyen_tai_san</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="search_view_id" ref="lich_su_dieu_chuyen_tai_san_search"/>
+        </record>
+
+      
+    </data>
+</odoo>

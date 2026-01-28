@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM VIEW -->
+        <record id="view_quan_ly_bao_tri_form" model="ir.ui.view">
+            <field name="name">quan_ly_bao_tri_form</field>
+            <field name="model">quan_ly_bao_tri</field>
+            <field name="arch" type="xml">
+                <form string="Quản lý bảo trì">
+                    <sheet>
+                        <group>
+                            <field name="phong_hop_id"/>
+                            <field name="nhan_vien_id"/>
+                            <field name="ngay_bao_tri"/>
+                            <field name="trang_thai"/>
+                        </group>
+
+                        <group>
+                            <field name="ghi_chu"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE VIEW -->
+        <record id="view_quan_ly_bao_tri_tree" model="ir.ui.view">
+            <field name="name">quan_ly_bao_tri_tree</field>
+            <field name="model">quan_ly_bao_tri</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="phong_hop_id"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="ngay_bao_tri"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- SEARCH VIEW -->
+        <record id="quan_ly_bao_tri_search" model="ir.ui.view">
+            <field name="model">quan_ly_bao_tri</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="phong_hop_id"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="trang_thai"/>
+
+                    <filter string="Đang bảo trì"
+                            name="dang_bao_tri"
+                            domain="[('trang_thai', '=', 'dang_bao_tri')]"/>
+
+                    <filter string="Hoàn thành"
+                            name="hoan_thanh"
+                            domain="[('trang_thai', '=', 'hoan_thanh')]"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_quan_ly_bao_tri" model="ir.actions.act_window">
+            <field name="name">Quản lý bảo trì</field>
+            <field name="res_model">quan_ly_bao_tri</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="quan_ly_bao_tri_search"/>
+        </record>
+
+    </data>
+</odoo>

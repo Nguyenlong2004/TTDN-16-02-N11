@@ -1,4 +1,5 @@
-from odoo import models, fields
+from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 class HopDongLaoDong(models.Model):
     _name = 'hop_dong_lao_dong'
@@ -22,3 +23,22 @@ class HopDongLaoDong(models.Model):
         required=True,
         index=True,
     )
+    @api.onchange('loai_hop_dong')
+    def _onchange_loai_hop_dong(self):
+        if self.loai_hop_dong == 'khong_xac_dinh':
+            self.ngay_ket_thuc = False
+    @api.constrains('ngay_bat_dau', 'ngay_ket_thuc', 'loai_hop_dong')
+    def _check_ngay_ket_thuc(self):
+        for record in self:
+            if record.loai_hop_dong != 'khong_xac_dinh':
+                if not record.ngay_ket_thuc:
+                    raise ValidationError("Ngày kết thúc hợp đồng phải được điền cho loại hợp đồng này.")
+                if record.ngay_ket_thuc <= record.ngay_bat_dau:
+                    raise ValidationError("Ngày kết thúc phải sau ngày bắt đầu.")        
+    @api.constrains('loai_hop_dong', 'ngay_ket_thuc')
+    def _check_ngay_ket_thuc(self):
+        for rec in self:
+            if rec.loai_hop_dong == 'khong_xac_dinh' and rec.ngay_ket_thuc:
+                raise ValidationError(
+                    "Hợp đồng không xác định thời hạn không được có ngày kết thúc!"
+                )

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+            id="menu_root"
+            name="QLPH"
+            sequence="0"/>     
+
+        <menuitem 
+            name="Danh Sách Phòng Họp" 
+            id="menu_danh_sach_phong_hop" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_danh_sach_phong_hop"
+        />  
+        <menuitem
+            name="Đơn Mượn Phòng"
+            id="menu_don_muon_phong"
+            parent="menu_root"
+            sequence="2"
+            action="action_don_muon_phong"
+        />
+        
+        <menuitem 
+            name="Quản Lý Bảo Trì" 
+            id="menu_quan_ly_bao_tri" 
+            parent="menu_root" 
+            sequence="4"
+            action="action_quan_ly_bao_tri"
+        />       
+        
+        <menuitem 
+            name="Lịch Sử Đặt Phòng" 
+            id="menu_lich_su_dat_phong" 
+            parent="menu_root" 
+            sequence="5"
+            action="action_lich_su_dat_phong"
+        />
+       
+        <menuitem
+            id="menu_su_co_phong_hop"
+            name="Sự cố phòng họp"
+            parent="menu_root"
+            action="action_su_co_phong_hop"
+            sequence="6"
+        />
+
+        <menuitem
+            id="menu_thong_ke_phong_hop"
+            name="Thống kê phòng họp"
+            parent="menu_root"
+            action="action_thong_ke_phong_hop"
+            sequence="7"
+        />
+
+        <!-- Nhật ký check-in -->
+        <menuitem
+            id="menu_phong_hop_event"
+            name="Nhật ký check-in"
+            parent="menu_root"
+            action="action_phong_hop_event"
+            sequence="8"
+        />
+
+          <!-- MENU -->
+        <menuitem id="menu_tien_ich_root" name="Tiện ích" parent="menu_root" sequence="90"/>
+        
+
+        <menuitem 
+            id="menu_vi_tri_phong_hop" 
+            name="Vị trí phòng họp" 
+            parent="menu_root" 
+            action="action_vi_tri_phong_hop" 
+            sequence="3"
+        />
+    </data>
+</odoo>

@@ -8,3 +8,5 @@ from . import chung_chi_bang_cap
 from . import danh_sach_chung_chi_bang_cap
 from . import phong_ban
 from . import hop_dong_lao_dong
+from . import bang_luong
+from . import cham_cong

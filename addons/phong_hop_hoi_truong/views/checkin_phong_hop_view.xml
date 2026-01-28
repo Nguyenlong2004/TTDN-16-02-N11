@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- TREE VIEW -->
+        <record id="view_checkin_phong_hop_tree" model="ir.ui.view">
+            <field name="name">checkin.phong.hop.tree</field>
+            <field name="model">checkin_phong_hop</field>
+            <field name="arch" type="xml">
+                <tree string="Check-in phòng họp">
+                    <field name="don_muon_id"/>
+                    <field name="phong_hop_id"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="thoi_gian_checkin"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- FORM VIEW -->
+        <record id="view_checkin_phong_hop_form" model="ir.ui.view">
+            <field name="name">checkin.phong.hop.form</field>
+            <field name="model">checkin_phong_hop</field>
+            <field name="arch" type="xml">
+                <form string="Check-in phòng họp">
+                    <sheet>
+                        <group>
+                            <field name="don_muon_id"/>
+                            <field name="phong_hop_id" readonly="1"/>
+                        </group>
+
+                        <group>
+                            <field name="nhan_vien_id"/>
+                            <field name="thoi_gian_checkin" readonly="1"/>
+                        </group>
+
+                        <group>
+                            <field name="trang_thai" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_quy_dinh_checkin_phong" model="ir.actions.act_window">
+            <field name="name">Quy định check-in phòng</field>
+            <field name="res_model">quy_dinh_checkin_phong</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="action_checkin_phong_hop" model="ir.actions.act_window">
+            <field name="name">Check-in phòng họp</field>
+            <field name="res_model">checkin_phong_hop</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

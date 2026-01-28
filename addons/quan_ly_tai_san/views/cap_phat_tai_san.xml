@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM VIEW -->
+        <record id="view_cap_phat_tai_san_form" model="ir.ui.view">
+            <field name="name">cap_phat_tai_san_form</field>
+            <field name="model">qlts.cap_phat_tai_san</field>
+            <field name="arch" type="xml">
+                <form string="Cấp phát tài sản">
+                    <sheet>
+                        <group>
+                            <group string="Thông tin phiếu">
+                                <field name="ma_phieu" readonly="1"/>
+                                <field name="ngay_cap_phat"/>
+                                <field name="trang_thai"/>
+                            </group>
+
+                            <group string="Thông tin tài sản">
+                                <field name="tai_san_id"/>
+                                <field name="so_luong"/>
+                                <field name="vi_tri_cap_phat_id" readonly="1" force_save="1"/>
+                            </group>
+
+                            <group string="Đối tượng nhận">
+                                <field name="phong_ban_nhan_id"/>
+                                <field name="nhan_vien_nhan_id"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <field name="ghi_chu"/>
+                        </group>
+                        <header>
+                            <button name="action_da_cap_phat"
+                                    type="object"
+                                    string="Xác nhận cấp phát"
+                                    class="btn-primary"
+                                    attrs="{'invisible': [('trang_thai', '=', 'da_cap_phat')]}"/>
+                        </header>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE VIEW -->
+        <record id="view_cap_phat_tai_san_tree" model="ir.ui.view">
+            <field name="name">cap_phat_tai_san_tree</field>
+            <field name="model">qlts.cap_phat_tai_san</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_phieu"/>
+                    <field name="tai_san_id"/>
+                    <field name="so_luong"/>
+                    <field name="vi_tri_cap_phat_id"/>
+                    <field name="phong_ban_nhan_id"/>
+                    <field name="nhan_vien_nhan_id"/>
+                    <field name="ngay_cap_phat"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_cap_phat_tai_san" model="ir.actions.act_window">
+            <field name="name">Cấp phát tài sản</field>
+            <field name="res_model">qlts.cap_phat_tai_san</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

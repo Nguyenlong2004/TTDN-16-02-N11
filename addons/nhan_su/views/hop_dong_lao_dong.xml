@@ -10,7 +10,8 @@
                 <field name="nhan_vien_id"/>
                 <field name="loai_hop_dong"/>
                 <field name="ngay_bat_dau"/>
-                <field name="ngay_ket_thuc"/>
+                <field name="ngay_ket_thuc"
+                />
             </tree>
         </field>
     </record>
@@ -27,7 +28,11 @@
                         <field name="nhan_vien_id"/>
                         <field name="loai_hop_dong"/>
                         <field name="ngay_bat_dau"/>
-                        <field name="ngay_ket_thuc"/>
+                        <field name="ngay_ket_thuc"
+                        attrs="{
+                                    'invisible': [('loai_hop_dong', '=', 'khong_xac_dinh')],
+                                    'required': [('loai_hop_dong', '!=', 'khong_xac_dinh')]
+                                }"/>
                         <field name="muc_luong"/>
                     </group>
                 </sheet>

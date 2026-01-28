@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Thay thế dashboard bằng graph view -->
+        <record id="view_thong_ke_graph" model="ir.ui.view">
+            <field name="name">thong_ke_graph</field>
+            <field name="model">thong_ke</field>
+            <field name="arch" type="xml">
+                <graph string="Báo cáo Thống kê Tài sản" type="bar">
+                    <field name="trang_thai" type="row"/>
+                    <field name="so_luong_trang_thai" type="measure"/>
+                </graph>
+            </field>
+        </record>
+        <!-- Form View -->
+        <record id="view_thong_ke_form" model="ir.ui.view">
+            <field name="name">thong.ke.form</field>
+            <field name="model">thong_ke</field>
+            <field name="arch" type="xml">
+                <form string="Thống kê tài sản">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="tong_tai_san"/>
+                                <field name="tong_so_luong_tai_san"/>
+                                <field name="trang_thai"/>
+                                <field name="so_luong_trang_thai"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_thong_ke_tree" model="ir.ui.view">
+            <field name="name">thong_ke_tree</field>
+            <field name="model">thong_ke</field>
+            <field name="arch" type="xml">
+                <tree string="Thống kê tài sản">
+                    
+                    <field name="tong_tai_san" />
+                    <field name="tong_so_luong_tai_san" />
+                    <field name="trang_thai"/>
+                    <field name="so_luong_trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- Kanban View -->
+        <record id="view_thong_ke_kanban" model="ir.ui.view">
+            <field name="name">thong_ke_kanban</field>
+            <field name="model">thong_ke</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_view">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_kanban_record">
+                                <div class="o_kanban_header">
+                                    <strong><field name="trang_thai"/></strong>
+                                </div>
+                                <div class="o_kanban_content">
+                                    <div class="o_kanban_column">
+                                        <span><strong>Số lượng:</strong> <field name="so_luong_trang_thai"/></span>
+                                    </div>
+                                    <div class="o_kanban_column">
+                                        <span><strong>Tổng tài sản:</strong> <field name="tong_tai_san"/></span>
+                                    </div>
+                                    <div class="o_kanban_column">
+                                        <span><strong>Tổng số lượng:</strong> <field name="tong_so_luong_tai_san"/></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_thong_ke_pivot" model="ir.ui.view">
+            <field name="name">thong_ke_pivot</field>
+            <field name="model">thong_ke</field>
+            <field name="arch" type="xml">
+                <pivot string="Báo cáo Thống kê Tài sản">
+                    <field name="trang_thai" type="row"/>
+                    <field name="so_luong_trang_thai" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        
+
+        <!-- Search View -->
+        <record id="thong_ke_search" model="ir.ui.view">
+            <field name="name">thong_ke_search_view</field>
+            <field name="model">thong_ke</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="tong_tai_san"/>
+                    <field name="tong_so_luong_tai_san"/>
+                    <field name="trang_thai"/>
+                    <field name="so_luong_trang_thai"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_thong_ke" model="ir.actions.act_window">
+            <field name="name">Thống kê tài sản</field>
+            <field name="res_model">thong_ke</field>
+            <field name="view_mode">tree,form,graph,pivot,kanban</field>
+            <field name="search_view_id" ref="thong_ke_search"/>
+        </record>
+
+    </data>
+</odoo>

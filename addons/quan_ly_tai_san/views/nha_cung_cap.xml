@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_nha_cung_cap_form" model="ir.ui.view">
+            <field name="name">nha_cung_cap.form</field>
+            <field name="model">nha_cung_cap</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Nhà Cung Cấp</div>
+                        <group  string="Thông tin chung">
+                            <field name="ma_nha_cung_cap"/>
+                            <field name="ten_nha_cung_cap"/>
+                            <field name="so_dien_thoai"/>
+                            <field name="email"/>
+                            <field name="website"/>
+                            <field name="dia_chi"/>
+                            <field name="ghi_chu"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_nha_cung_cap_tree" model="ir.ui.view">
+            <field name="name">nha_cung_cap.tree</field>
+            <field name="model">nha_cung_cap</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_nha_cung_cap"/>
+                    <field name="ten_nha_cung_cap"/>
+                    <field name="so_dien_thoai"/>
+                    <field name="email"/>
+                    <field name="website"/>
+                    <field name="dia_chi"/>
+                    <field name="ghi_chu"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="nha_cung_cap_search">
+            <field name="model">nha_cung_cap</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ma_nha_cung_cap"/>
+                    <field name="ten_nha_cung_cap"/>
+                    <field name="so_dien_thoai"/>
+                    <field name="email"/>
+                    <field name="website"/>
+                    <field name="dia_chi"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_nha_cung_cap" model="ir.actions.act_window">
+            <field name="name">Quản lý Nhà Cung Cấp</field>
+            <field name="res_model">nha_cung_cap</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="nha_cung_cap_search"/>
+        </record>
+    </data>
+</odoo>

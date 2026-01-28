@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "nhan_su",
+    'name': "quan_ly_tai_san",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -20,25 +20,26 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
-
+    'depends': ['base', 'nhan_su'],
+    
     # always loaded
     'data': [
-    'security/ir.model.access.csv',
-
-    'views/chuc_vu.xml',
-    'views/don_vi.xml',
-    'views/nhan_vien.xml',
-    'views/lich_su_cong_tac.xml',
-    'views/chung_chi_bang_cap.xml',
-    'views/danh_sach_chung_chi_bang_cap.xml',
-    'views/phong_ban.xml',
-    'views/hop_dong_lao_dong.xml',
-    'views/cham_cong.xml',
-    'views/bang_luong.xml',
-    'views/menu.xml',
-],
-
+        'security/ir.model.access.csv',
+        'views/tai_san.xml',
+        'views/thanh_ly.xml',
+        'views/bao_tri.xml',
+        'views/muon_tra.xml',
+        'views/lich_su_quan_ly_tai_san.xml',
+        'views/nha_cung_cap.xml',
+        'views/lich_su_su_dung_tai_san.xml',
+        'views/danh_muc_loai_tai_san.xml',
+        'views/dieu_chuyen_tai_san.xml',
+        'views/lich_su_dieu_chuyen_tai_san.xml',
+        'views/thong_ke.xml',
+        'views/cap_phat_tai_san.xml',
+        'views/lich_su_cap_phat_tai_san_view.xml',
+        'views/menu.xml',
+    ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',

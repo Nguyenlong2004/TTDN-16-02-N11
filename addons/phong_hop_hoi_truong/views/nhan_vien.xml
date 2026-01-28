@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="view_nhan_vien_form" model="ir.ui.view">
+            <field name="name">nhan_vien_form</field>
+            <field name="model">nhan_vien</field>
+            <field name="arch" type="xml">
+                <form string="Nhân Viên">
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Thông Tin Nhân Viên</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="ma_nhan_vien"/>
+                            <field name="ho_ten"/>
+                            <field name="ngay_sinh"/>
+                            <field name="tuoi" readonly="1"/>
+                            <field name="gioi_tinh"/>
+                            <field name="so_dien_thoai"/>
+                            <field name="email"/>
+                            <field name="chuc_vu"/>
+                            <field name="trang_thai"/>
+                        </group>
+                        <group string="Lịch Sử Hoạt Động">
+                            <field name="lich_su_dat_phong_ids">
+                                <tree editable="bottom">
+                                    <field name="phong_hop_id"/>
+                                    <field name="thoi_gian_bat_dau"/>
+                                    <field name="thoi_gian_ket_thuc"/>
+                                    <field name="trang_thai"/>
+                                </tree>
+                            </field>
+                            <field name="bao_tri_ids">
+                                <tree editable="bottom">
+                                    <field name="thiet_bi_id"/>
+                                    <field name="ngay_bao_tri"/>
+                                    <field name="trang_thai"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button string="Lưu" type="object" name="action_set_working" class="btn-primary"/>
+                        <button string="Hủy" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_nhan_vien_tree" model="ir.ui.view">
+            <field name="name">nhan_vien_tree</field>
+            <field name="model">nhan_vien</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_nhan_vien"/>
+                    <field name="ho_ten"/>
+                    <field name="chuc_vu"/>
+                    <field name="so_dien_thoai"/>
+                    <field name="email"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="nhan_vien_search" model="ir.ui.view">
+            <field name="model">nhan_vien</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ma_nhan_vien"/>
+                    <field name="ho_ten"/>
+                    <field name="chuc_vu"/>
+                    <field name="trang_thai"/>
+                    <filter string="Đang làm việc" name="working" domain="[('trang_thai', '=', 'working')]"/>
+                    <filter string="Đang nghỉ phép" name="on_leave" domain="[('trang_thai', '=', 'on_leave')]"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_nhan_vien" model="ir.actions.act_window">
+            <field name="name">Nhân Viên</field>
+            <field name="res_model">nhan_vien</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="nhan_vien_search"/>
+        </record>
+    </data>
+</odoo>

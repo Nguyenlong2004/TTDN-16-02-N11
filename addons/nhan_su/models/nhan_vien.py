@@ -26,14 +26,31 @@ class NhanVien(models.Model):
         string="Danh sách lịch sử công tác"
     )
 
+    ma_cham_cong = fields.One2many(
+        'nhan_su.cham_cong',
+        'nhan_vien_id',
+        string="Chấm công"
+    )
+
     hop_dong_lao_dong_ids = fields.One2many(
         'hop_dong_lao_dong',
         'nhan_vien_id',
         string="Hợp đồng lao động"
     )
 
+    bang_luong_ids = fields.One2many(
+        'bang_luong',
+        'nhan_vien_id',
+        string="Bảng lương"
+    )
+    chuc_vu_id = fields.Many2one(
+    'chuc_vu',
+    string="Chức vụ"
+    )
+
     tuoi = fields.Integer("Tuổi", compute="_compute_tuoi", store=True)
     anh = fields.Binary("Ảnh")
+    luong_co_ban = fields.Float("Lương cơ bản")
 
     danh_sach_chung_chi_bang_cap_ids = fields.One2many(
         "danh_sach_chung_chi_bang_cap",
@@ -41,11 +58,15 @@ class NhanVien(models.Model):
         string="Danh sách chứng chỉ bằng cấp"
     )
 
-    # ✅ FIX: compute phải trỏ đúng tên hàm
     so_nguoi_bang_tuoi = fields.Integer(
         "Số người bằng tuổi",
         compute="_compute_so_nguoi_bang_tuoi",
         store=True
+    )
+    
+    phong_ban_id = fields.Many2one(
+        'phong_ban',
+        string="Phòng ban"
     )
 
     so_a = fields.Integer(string="Số a")
@@ -57,10 +78,11 @@ class NhanVien(models.Model):
         for record in self:
             record.tong_ab = (record.so_a or 0) + (record.so_b or 0)
 
+    # ✅ FIX CHUẨN Ở ĐÂY
     @api.depends("tuoi")
     def _compute_so_nguoi_bang_tuoi(self):
         for record in self:
-            if record.tuoi:
+            if record.tuoi and record.id:
                 records = self.env['nhan_vien'].search([
                     ('tuoi', '=', record.tuoi),
                     ('id', '!=', record.id),
@@ -82,7 +104,9 @@ class NhanVien(models.Model):
     def _default_ma_dinh_danh(self):
         for record in self:
             if record.ho_ten_dem and record.ten:
-                chu_cai_dau = ''.join([tu[0][0] for tu in record.ho_ten_dem.lower().split() if tu])
+                chu_cai_dau = ''.join(
+                    [tu[0][0] for tu in record.ho_ten_dem.lower().split() if tu]
+                )
                 record.ma_dinh_danh = record.ten.lower() + chu_cai_dau
 
     @api.depends("ngay_sinh")
@@ -99,3 +123,4 @@ class NhanVien(models.Model):
         for record in self:
             if record.tuoi and record.tuoi < 18:
                 raise ValidationError("Tuổi không được bé hơn 18")
+

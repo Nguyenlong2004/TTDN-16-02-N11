@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- ================= FORM VIEW ================= -->
+        <record id="view_qlts_lich_su_cap_phat_form" model="ir.ui.view">
+            <field name="name">qlts.lich_su_cap_phat.form</field>
+            <field name="model">qlts.lich_su_cap_phat</field>
+            <field name="arch" type="xml">
+                <form string="Lịch sử cấp phát tài sản">
+                    <sheet>
+                        <div class="oe_read_only"
+                             style="font-size:40px; text-align:center; margin-bottom:10px;">
+                            Lịch sử cấp phát tài sản
+                        </div>
+
+                        <group col="2" string="Thông tin chung">
+                            <field name="cap_phat_id" readonly="1"/>
+                            <field name="loai"/>
+                            <field name="ngay_thuc_hien"/>
+                            <field name="tai_san_id"/>
+                            <field name="so_luong"/>
+                            <field name="vi_tri_id"/>
+                            <field name="nhan_vien_id"/>
+                            <field name="phong_ban_id"/>
+                            <field name="nguoi_thuc_hien_id" readonly="1"/>
+                            <field name="ghi_chu"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ================= TREE VIEW ================= -->
+        <record id="view_qlts_lich_su_cap_phat_tree" model="ir.ui.view">
+            <field name="name">qlts.lich_su_cap_phat.tree</field>
+            <field name="model">qlts.lich_su_cap_phat</field>
+            <field name="arch" type="xml">
+                <tree string="Lịch sử cấp phát tài sản">
+                    <field name="cap_phat_id"/>
+                    <field name="loai"/>
+                    <field name="ngay_thuc_hien"/>
+                    <field name="tai_san_id"/>
+                    <field name="so_luong"/>
+                    <field name="vi_tri_id"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="phong_ban_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- ================= GRAPH VIEW ================= -->
+        <record id="view_qlts_lich_su_cap_phat_graph" model="ir.ui.view">
+            <field name="name">qlts.lich_su_cap_phat.graph</field>
+            <field name="model">qlts.lich_su_cap_phat</field>
+            <field name="arch" type="xml">
+                <graph string="Biểu đồ cấp phát tài sản" type="bar">
+                    <field name="tai_san_id" type="row"/>
+                    <field name="so_luong" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- ================= SEARCH VIEW ================= -->
+        <record id="view_qlts_lich_su_cap_phat_search" model="ir.ui.view">
+            <field name="name">qlts.lich_su_cap_phat.search</field>
+            <field name="model">qlts.lich_su_cap_phat</field>
+            <field name="arch" type="xml">
+                <search string="Tìm kiếm lịch sử cấp phát">
+                    <field name="cap_phat_id"/>
+                    <field name="tai_san_id"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="phong_ban_id"/>
+                    <field name="loai"/>
+
+                    <separator/>
+
+                    <filter name="filter_cap_phat"
+                            string="Cấp phát"
+                            domain="[('loai','=','cap_phat')]"/>
+
+                    <filter name="filter_thu_hoi"
+                            string="Thu hồi"
+                            domain="[('loai','=','thu_hoi')]"/>
+                </search>
+            </field>
+        </record>
+
+
+        <!-- ================= ACTION ================= -->
+        <record id="action_qlts_lich_su_cap_phat" model="ir.actions.act_window">
+            <field name="name">Lịch sử cấp phát tài sản</field>
+            <field name="res_model">qlts.lich_su_cap_phat</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="search_view_id" ref="view_qlts_lich_su_cap_phat_search"/>
+        </record>
+
+    </data>
+</odoo>

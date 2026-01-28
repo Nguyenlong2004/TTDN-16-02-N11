@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- FORM VIEW -->
+        <record id="view_lich_su_quan_ly_tai_san_form" model="ir.ui.view">
+            <field name="name">lich_su_quan_ly_tai_san</field>
+            <field name="model">lich_su_quan_ly_tai_san</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group string="Thông tin chung">
+                            <field name="tai_san_id" readonly="1"/>
+                            <field name="ten_tai_san" readonly="1"/>
+                            <field name="nhan_vien_id" readonly="1"/>
+                            <field name="ho_va_ten" readonly="1"/>
+                            <field name="phong_ban_id" readonly="1"/>
+                            <field name="chuc_vu_id" readonly="1"/>
+                        </group>
+
+                        <group string="Mượn trả tài sản">
+                            <field name="muon_tra_id"/>
+                            <field name="ngay_muon" readonly="1"/>
+                            <field name="ngay_tra" readonly="1"/>
+                            <field name="trang_thai" readonly="1"/>
+                        </group>
+
+                        <group string="Kiểm tra tài sản">
+                            <field name="nguoi_kiem_tra"/>
+                            <field name="tinh_trang_truoc"/>
+                            <field name="tinh_trang_sau"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE VIEW -->
+        <record id="view_lich_su_quan_ly_tai_san_tree" model="ir.ui.view">
+            <field name="name">lich_su_quan_ly_tai_san.tree</field>
+            <field name="model">lich_su_quan_ly_tai_san</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="tai_san_id"/>
+                    <field name="ten_tai_san"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="ho_va_ten"/>
+                    <field name="phong_ban_id" readonly="1"/>
+                    <field name="chuc_vu_id" readonly="1"/>
+                    <field name="muon_tra_id"/>
+                    <field name="ngay_muon"/>
+                    <field name="ngay_tra"/>
+                    <field name="trang_thai"/>
+                    <field name="nguoi_kiem_tra"/>
+                    <field name="tinh_trang_truoc"/>
+                    <field name="tinh_trang_sau"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- SEARCH VIEW -->
+        <record model="ir.ui.view" id="lich_su_quan_ly_tai_san_search">
+            <field name="model">lich_su_quan_ly_tai_san</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="tai_san_id"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="trang_thai"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_lich_su_quan_ly_tai_san" model="ir.actions.act_window">
+            <field name="name">Lịch sử quản lý tài sản</field>
+            <field name="res_model">lich_su_quan_ly_tai_san</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_lich_su_quan_ly_tai_san_tree"/>
+            <field name="search_view_id" ref="lich_su_quan_ly_tai_san_search"/>
+        </record>
+
+       
+    </data>
+</odoo>

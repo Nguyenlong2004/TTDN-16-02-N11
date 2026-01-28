@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Form View -->
+        <record id="view_danh_sach_phong_hop_form" model="ir.ui.view">
+            <field name="name">danh_sach_phong_hop_form</field>
+            <field name="model">danh_sach_phong_hop</field>
+            <field name="arch" type="xml">
+                <form string="Danh sách phòng họp">
+                    <sheet>
+                        <group>
+                            <field name="ten_phong"/>
+                            <field name="suc_chua"/>
+                            <!-- SỬA Ở ĐÂY -->
+                            <field name="vi_tri_id"/>
+                            <field name="trang_thai"/>
+                        </group>
+
+                        <group string="Hình ảnh">
+                            <field name="hinh_anh_phong_hop"
+                                   widget="image"
+                                   class="oe_avatar"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_danh_sach_phong_hop_tree" model="ir.ui.view">
+            <field name="name">danh_sach_phong_hop_tree</field>
+            <field name="model">danh_sach_phong_hop</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ten_phong"/>
+                    <field name="suc_chua"/>
+                    <field name="vi_tri_id"/>
+                    <field name="trang_thai"/>
+                    <field name="thoi_gian_ket_thuc_hien_tai"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="danh_sach_phong_hop_search" model="ir.ui.view">
+            <field name="model">danh_sach_phong_hop</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ten_phong"/>
+                    <!-- SỬA Ở ĐÂY -->
+                    <field name="vi_tri_id"/>
+                    <field name="trang_thai"/>
+
+                    <filter string="Đang sử dụng"
+                            name="using"
+                            domain="[('trang_thai', '=', 'using')]"/>
+
+                    <filter string="Bảo trì"
+                            name="maintenance"
+                            domain="[('trang_thai', '=', 'maintenance')]"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_danh_sach_phong_hop" model="ir.actions.act_window">
+            <field name="name">Danh sách phòng họp</field>
+            <field name="res_model">danh_sach_phong_hop</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="danh_sach_phong_hop_search"/>
+        </record>
+        <record id="cron_update_trang_thai_phong" model="ir.cron">
+            <field name="name">Cập nhật trạng thái phòng họp</field>
+            <field name="model_id" ref="model_danh_sach_phong_hop"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_update_trang_thai_phong()</field>
+            <field name="interval_number">5</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="active">True</field>
+        </record>
+
+    </data>
+</odoo>

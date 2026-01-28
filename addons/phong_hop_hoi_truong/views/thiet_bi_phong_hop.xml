@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="view_thiet_bi_phong_hop_form" model="ir.ui.view">
+            <field name="name">thiet_bi_phong_hop_form</field>
+            <field name="model">thiet_bi_phong_hop</field>
+            <field name="arch" type="xml">
+                <form string="Thiết bị phòng họp">
+                    <sheet>
+                        <group>
+                            <field name="ten_thiet_bi"/>
+                            <field name="serial_number"/>
+                            <field name="loai_thiet_bi"/>
+                            <field name="trang_thai"/>
+                            <field name="phong_hop_id"/>
+                        </group>
+                        <group col="4" string="Hình ảnh">
+                            <field name="image" widget="image"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_thiet_bi_phong_hop_tree" model="ir.ui.view">
+            <field name="name">thiet_bi_phong_hop_tree</field>
+            <field name="model">thiet_bi_phong_hop</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ten_thiet_bi"/>
+                    <field name="serial_number"/>
+                    <field name="loai_thiet_bi"/>
+                    <field name="trang_thai"/>
+                    <field name="phong_hop_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="thiet_bi_phong_hop_search" model="ir.ui.view">
+            <field name="model">thiet_bi_phong_hop</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ten_thiet_bi"/>
+                    <field name="serial_number"/>
+                    <field name="loai_thiet_bi"/>
+                    <field name="trang_thai"/>
+                    <field name="phong_hop_id"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_thiet_bi_phong_hop" model="ir.actions.act_window">
+            <field name="name">Thiết Bị Phòng Họp</field>
+            <field name="res_model">thiet_bi_phong_hop</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="thiet_bi_phong_hop_search"/>
+        </record>
+    </data>
+</odoo>

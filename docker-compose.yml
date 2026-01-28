@@ -5,38 +5,27 @@ services:
     container_name: postgres_odoo-base-15-01
     image: postgres:10-alpine
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-postgres}
-      POSTGRES_USER: ${POSTGRES_USER:-odoo}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-odoo}
+      POSTGRES_DB: postgres
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
       PGDATA: /data/postgres
     volumes:
-       - /home/ttdn/ttdn_k15/database_ttdn/cntt15_01_db/_data:/data/postgres
+      - /home/ttdn/ttdn_k15/database_ttdn/cntt15_01_db/_data:/data/postgres
     ports:
       - "5431:5432"
-    # networks:
-    #   - postgres
-    # restart: unless-stopped
 
-  # pgadmin:
-  #   container_name: pgadmin_container
-  #   image: dpage/pgadmin4
-  #   environment:
-  #     PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
-  #     PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
-  #     PGADMIN_CONFIG_SERVER_MODE: 'False'
-  #   volumes:
-  #      - pgadmin:/root/.pgadmin
+  odoo15:
+    container_name: odoo15
+    image: odoo:15
+    depends_on:
+      - postgres-odoo-base-15-01
+    ports:
+      - "8069:8069"
+    volumes:
+      - ./addons:/mnt/extra-addons
+      - ./odoo.conf:/etc/odoo/odoo.conf
+    environment:
+      - HOST=postgres-odoo-base-15-01
+      - USER=odoo
+      - PASSWORD=odoo
 
-  #   ports:
-  #     - "${PGADMIN_PORT:-5050}:80"
-  #   networks:
-  #     - postgres
-  #   restart: unless-stopped
-
-#networks:
-#  postgres:
-#    driver: bridge
-
-#volumes:
-#    postgres:
-#    pgadmin:

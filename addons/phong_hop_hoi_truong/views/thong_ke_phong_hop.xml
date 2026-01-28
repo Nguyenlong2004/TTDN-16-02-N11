@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <!-- Thống kê phòng họp -->
+                <record id="view_thong_ke_phong_hop_form" model="ir.ui.view">
+            <field name="name">thong_ke_phong_hop.form</field>
+            <field name="model">thong_ke_phong_hop</field>
+            <field name="arch" type="xml">
+                <form string="Thống kê phòng họp">
+                    <sheet>
+                        <group>
+                            <field name="phong_hop_id"/>
+                            <field name="so_lan_su_dung"/>
+                            <field name="so_thiet_bi_duoc_su_dung"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Biểu đồ thống kê -->
+        <record id="view_thong_ke_phong_hop_graph" model="ir.ui.view">
+            <field name="name">thong_ke_phong_hop.graph</field>
+            <field name="model">thong_ke_phong_hop</field>
+            <field name="arch" type="xml">
+                <graph string="Biểu đồ sử dụng phòng họp" type="bar">
+                    <field name="phong_hop_id" type="row"/>
+                    <field name="so_lan_su_dung" type="measure"/>
+                </graph>
+            </field>
+        </record>
+        <record id="view_thong_ke_phong_hop_tree" model="ir.ui.view">
+    <field name="name">thong_ke_phong_hop.tree</field>
+    <field name="model">thong_ke_phong_hop</field>
+    <field name="arch" type="xml">
+        <tree string="Thống kê phòng họp">
+            <field name="phong_hop_id"/>
+            <field name="so_lan_su_dung"/>
+            <field name="so_thiet_bi_duoc_su_dung"/>
+        </tree>
+    </field>
+</record>
+
+
+        <!-- Action mở biểu đồ -->
+        <record id="action_thong_ke_phong_hop" model="ir.actions.act_window">
+    <field name="name">Thống kê phòng họp</field>
+    <field name="res_model">thong_ke_phong_hop</field>
+    <field name="view_mode">tree,graph</field>
+</record>
+
+    </data>
+</odoo>

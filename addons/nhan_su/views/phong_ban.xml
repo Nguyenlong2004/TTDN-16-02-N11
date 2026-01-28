@@ -17,6 +17,17 @@
                             <field name="ten_phong_ban"/>
                             <field name="mo_ta"/>
                         </group>
+                         <notebook>
+                    <page string="Nhân viên">
+                        <field name="nhan_vien_ids">
+                            <tree>
+                                <field name="ma_dinh_danh"/>
+                                <field name="ten"/>
+    
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_thanh_ly_form" model="ir.ui.view">
+            <field name="name">thanh_ly</field>
+            <field name="model">thanh_ly</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Thanh Lý</div>
+                        <group col="5" string="Thông tin chung">
+                            <field name="ma_thanh_ly"/>
+                            <field name="tai_san_id"/>
+                            <field name="ten_tai_san" readonly="1"/>
+                            <field name="trang_thai_tai_san" invisible="1"/>
+                            <field name="ngay_thanh_ly"/>
+                            <field name="gia_tri_thanh_ly"/>
+                            <field name="nha_cung_cap_id"/>
+                            <field name="nhan_vien_id"/>
+                            <field name="nguoi_phe_duyet"/>
+                            <field name="chuc_vu_id"/>
+                            <field name="ghi_chu"/>
+                        </group>
+                    </sheet>
+                    <header>
+                        <button name="action_xac_nhan_thanh_ly"
+                                type="object"
+                                string="Xác nhận thanh lý"
+                                class="btn-danger"
+                                attrs="{'invisible': [('trang_thai_tai_san', '=', 'da_thanh_ly')]}"
+                        />
+                    </header>
+
+                </form>
+            </field>
+        </record>
+        <record id="view_thanh_ly_tree" model="ir.ui.view">
+            <field name="name">thanh_ly</field>
+            <field name="model">thanh_ly</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_thanh_ly"/>
+                    <field name="tai_san_id"/>
+                    <field name="ten_tai_san" readonly="1"/>
+                    <field name="trang_thai_tai_san" invisible="1"/>
+                    <field name="ngay_thanh_ly"/>
+                    <field name="gia_tri_thanh_ly"/>
+                    <field name="nha_cung_cap_id"/>
+                    <field name="nguoi_phe_duyet"/>
+                    <field name="chuc_vu_id"/>
+                    <field name="ghi_chu"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="thanh_ly_search">
+            <field name="model">thanh_ly</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ma_thanh_ly"/>
+                    <field name="tai_san_id"/>
+                    <field name="ten_tai_san" readonly="1"/>
+                    <field name="trang_thai_tai_san" invisible="1"/>
+                    <field name="ngay_thanh_ly"/>
+                    <field name="gia_tri_thanh_ly"/>
+                    <field name="nha_cung_cap_id"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="nguoi_phe_duyet"/>
+                    <field name="chuc_vu_id"/>
+                    <field name="ghi_chu"/>
+                    
+                </search>
+            </field>
+        </record>
+
+        <record id="action_thanh_ly" model="ir.actions.act_window">
+            <field name="name">Quản lý thanh lý tài sản</field>
+            <field name="res_model">thanh_ly</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "thanh_ly_search"/>
+        </record>
+    </data>
+</odoo>
+
+    

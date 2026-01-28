@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="view_lich_su_su_dung_tai_san_form" model="ir.ui.view">
+            <field name="name">lich_su_su_dung_tai_san_form_view</field>
+            <field name="model">lich_su_su_dung_tai_san</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title" style="font-size:20px; text-align:center; margin-bottom:10px;">Lịch Sử Sử Dụng Tài Sản</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="muon_tra_id" required="1"/>
+                            <field name="trang_thai" readonly="1"/>
+                        </group>
+                        
+                        <group col="4" string="Thông tin tài sản">
+                            <field name="tai_san_id" readonly="1"/>
+                            <field name="ten_tai_san" readonly="1"/>
+                        </group>
+                        
+                        <group col="4" string="Thông tin mượn/trả">
+                            <field name="ngay_muon" readonly="1"/>
+                            <field name="ngay_tra" readonly="1"/>
+                        </group>
+                        
+                        <group col="4" string="Thông tin nhân viên">
+                            <field name="nhan_vien_id" readonly="1"/>
+                            <field name="ho_va_ten" readonly="1"/>
+                            <field name="phong_ban_id" readonly="1"/>
+                            <field name="chuc_vu_id" readonly="1"/>
+                        </group>
+                        
+                        <group col="4" string="Kiểm tra tài sản">
+                            <field name="nguoi_kiem_tra"/>
+                            <field name="tinh_trang_truoc" readonly="1"/>
+                            <field name="tinh_trang_sau"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <!-- Tree View -->
+        <record id="view_lich_su_su_dung_tai_san_tree" model="ir.ui.view">
+            <field name="name">lich_su_su_dung_tai_san_tree_view</field>
+            <field name="model">lich_su_su_dung_tai_san</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="muon_tra_id"/>
+                    <field name="tai_san_id"/>
+                    <field name="trang_thai"/>
+                    <field name="ngay_muon"/>
+                    <field name="ngay_tra"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="tinh_trang_truoc"/>
+                    <field name="tinh_trang_sau"/>
+                    <field name="nguoi_kiem_tra"/>
+
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Search View -->
+        <record id="lich_su_su_dung_tai_san_search" model="ir.ui.view">
+            <field name="name">lich_su_su_dung_tai_san_search_view</field>
+            <field name="model">lich_su_su_dung_tai_san</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="muon_tra_id"/>
+                    <field name="tai_san_id"/>
+                    <field name="trang_thai"/>
+                    <field name="ngay_muon"/>
+                    <field name="ngay_tra"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="nguoi_kiem_tra"/>
+                </search>
+            </field>
+        </record>
+        
+        <!-- Action -->
+        <record id="action_lich_su_su_dung_tai_san" model="ir.actions.act_window">
+            <field name="name">Lịch Sử Sử Dụng Tài Sản</field>
+            <field name="res_model">lich_su_su_dung_tai_san</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="lich_su_su_dung_tai_san_search"/>
+        </record>
+    </data>
+</odoo>

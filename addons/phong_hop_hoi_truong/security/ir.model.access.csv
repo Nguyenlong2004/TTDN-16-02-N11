@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_danh_sach_phong_hop,danh_sach_phong_hop,model_danh_sach_phong_hop,base.group_user,1,1,1,1
+access_lich_su_dat_phong,lich_su_dat_phong,model_lich_su_dat_phong,base.group_user,1,1,1,1
+access_quan_ly_bao_tri,quan_ly_bao_tri,model_quan_ly_bao_tri,base.group_user,1,1,1,1
+access_don_muon_phong,don_muon_phong,model_don_muon_phong,base.group_user,1,1,1,1
+access_su_co_phong_hop_user,access_su_co_phong_hop_user,model_su_co_phong_hop,,1,1,1,0
+access_su_co_phong_hop_admin,access_su_co_phong_hop_admin,model_su_co_phong_hop,base.group_system,1,1,1,1
+access_vi_tri_phong_hop_user,vi_tri_phong_hop_user,model_vi_tri_phong_hop,base.group_user,1,1,1,1
+access_goi_y_phong_hop_trong_user,goi_y_phong_hop_trong_user,model_goi_y_phong_hop_trong,base.group_user,1,1,1,0
+access_thong_ke_phong_hop,access_thong_ke_phong_hop,model_thong_ke_phong_hop,base.group_user,1,0,0,0
+access_phong_hop_event_user,phong_hop_event_user,model_phong_hop_event,base.group_user,1,0,1,0
+access_phong_hop_event_manager,phong_hop_event_manager,model_phong_hop_event,base.group_system,1,1,1,1

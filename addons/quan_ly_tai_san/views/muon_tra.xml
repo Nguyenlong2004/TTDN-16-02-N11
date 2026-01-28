@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="view_muon_tra_form" model="ir.ui.view">
+            <field name="name">muon_tra</field>
+            <field name="model">muon_tra</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <div class="oe_read_only" style="font-size:25px">Mượn trả</div>
+                            <group string="Thông tin tài sản">
+                                <field name="ma_muon"/>
+                                <field name="tai_san_id"/>
+                                <field name="ten_tai_san" readonly="1"/>
+                                <field name="ghi_chu"/>
+                            </group>
+                            <group string="Thông tin nhân viên">
+                                <field name="nhan_vien_id"/>
+                                <field name="ho_va_ten"/>
+                                <field name="phong_ban_id" widget="many2one"/>
+                                <field name="chuc_vu_id" widget="many2one"/>
+                            </group>
+                            <group string="Thông tin mượn trả">
+                                <field name="thoi_gian_muon"/>
+                                <field name="thoi_gian_tra_du_kien"/>
+                                <field name="thoi_gian_tra_thuc_te"/>
+                                <field name="trang_thai"/>
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_muon_tra_tree" model="ir.ui.view">
+            <field name="name">muon_tra</field>
+            <field name="model">muon_tra</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_muon"/>
+                    <field name="tai_san_id"/>
+                    <field name="ten_tai_san" readonly="1"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="ho_va_ten"/>
+                    <field name="phong_ban_id" widget="many2one"/>
+                    <field name="chuc_vu_id" widget="many2one"/>
+                    <field name="thoi_gian_muon"/>
+                    <field name="thoi_gian_tra_du_kien"/>
+                    <field name="thoi_gian_tra_thuc_te"/>
+                    <field name="trang_thai"/>
+                    <field name="ghi_chu"/>
+                    <button name="xuat_don_muon" type="object" icon="fa-download"
+                        string="Xuất đơn mượn" class="oe_highlight"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="muon_tra_search" model="ir.ui.view">
+            <field name="model">muon_tra</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ma_muon"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="ho_va_ten"/>
+                    <field name="phong_ban_id"/>
+                    <field name="chuc_vu_id"/>
+                    <field name="tai_san_id"/>
+                    <field name="thoi_gian_muon"/>
+                    <field name="thoi_gian_tra_du_kien"/>
+                    <field name="thoi_gian_tra_thuc_te"/>
+                    <field name="trang_thai"/>
+                    <field name="ghi_chu"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_muon_tra" model="ir.actions.act_window">
+            <field name="name">Quản lý mượn trả tài sản</field>
+            <field name="res_model">muon_tra</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="muon_tra_search"/>
+        </record>
+    </data>
+</odoo>

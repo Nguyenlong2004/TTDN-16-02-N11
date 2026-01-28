@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM VIEW (Wizard) -->
+        <record id="view_goi_y_phong_hop_trong_form" model="ir.ui.view">
+            <field name="name">goi_y_phong_hop_trong.form</field>
+            <field name="model">goi_y_phong_hop_trong</field>
+            <field name="arch" type="xml">
+                <form string="Gợi ý phòng họp trống">
+                    <sheet>
+
+                        <group>
+                            <field name="su_co_id" readonly="1"/>
+                        </group>
+
+                        <group string="Danh sách phòng trống">
+                            <field name="phong_goi_y_ids" widget="many2many_tags"/>
+                        </group>
+
+                        <footer>
+                            <button string="Đóng"
+                                    class="btn-secondary"
+                                    special="cancel"/>
+                        </footer>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_goi_y_phong_hop_trong" model="ir.actions.act_window">
+            <field name="name">Gợi ý phòng họp trống</field>
+            <field name="res_model">goi_y_phong_hop_trong</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

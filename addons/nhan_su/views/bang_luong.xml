@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_bang_luong_form" model="ir.ui.view">
+            <field name="name">bang_luong</field>
+            <field name="model">bang_luong</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Bảng lương</div>
+                        <group col="4" string="Thông tin lương">
+                            <field name="nhan_vien_id"/>
+                            <field name="thang"/>
+                            <field name="nam"/>
+                            <field name="ngay_bang_luong"/>
+                            <field name="so_ngay_lam_viec"/>
+                            <field name="luong_co_ban"/>
+                            <field name="so_cong"/>
+                            <field name="luong_theo_cong"/>
+                            <field name="thuong"/>
+                            <field name="phat"/>
+                            <field name="luong_nhan"/>
+                        </group>
+                        <notebook>
+                            <page string="Chi tiết chấm công">
+                                <field name="cham_cong_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_bang_luong_tree" model="ir.ui.view">
+            <field name="name">bang_luong</field>
+            <field name="model">bang_luong</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nhan_vien_id"/>
+                    <field name="thang"/>
+                    <field name="nam"/>
+                    <field name="ngay_bang_luong"/>
+                    <field name="so_ngay_lam_viec"/>
+                    <field name="luong_co_ban"/>
+                    <field name="so_cong"/>
+                    <field name="luong_theo_cong"/>
+                    <field name="thuong"/>
+                    <field name="phat"/>
+                    <field name="luong_nhan"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="bang_luong_search">
+            <field name="model">bang_luong</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nhan_vien_id"/>
+                    <field name="thang"/>
+                    <field name="nam"/>
+                    <field name="ngay_bang_luong"/>
+                    <field name="so_cong"/>
+                    <field name="luong_theo_cong"/>
+                    <field name="luong_nhan"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_bang_luong" model="ir.actions.act_window">
+            <field name="name">Bảng lương</field>
+            <field name="res_model">bang_luong</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="bang_luong_search"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- TREE VIEW -->
+        <record id="view_vi_tri_phong_hop_tree" model="ir.ui.view">
+            <field name="name">vi_tri_phong_hop.tree</field>
+            <field name="model">vi_tri_phong_hop</field>
+            <field name="arch" type="xml">
+                <tree string="Vị trí phòng họp">
+                    <field name="name"/>
+                    <field name="toa_nha"/>
+                    <field name="tang"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- FORM VIEW -->
+        <record id="view_vi_tri_phong_hop_form" model="ir.ui.view">
+            <field name="name">vi_tri_phong_hop.form</field>
+            <field name="model">vi_tri_phong_hop</field>
+            <field name="arch" type="xml">
+                <form string="Vị trí phòng họp">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="toa_nha"/>
+                            <field name="tang"/>
+                            <field name="ghi_chu"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_vi_tri_phong_hop" model="ir.actions.act_window">
+            <field name="name">Vị trí phòng họp</field>
+            <field name="res_model">vi_tri_phong_hop</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
