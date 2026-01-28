@@ -39,34 +39,81 @@ Hệ thống tích hợp các phân hệ quản lý tài sản, quản lý phòn
 
 ## 🚀 3. Các phân hệ chính
 ⚙️ Phân hệ Quản lý Tài sản
-
-Quản lý danh mục tài sản: loại tài sản, tình trạng, vị trí, nhà cung cấp.
-
-Theo dõi quá trình cấp phát, mượn – trả tài sản trong đơn vị.
-
-Quản lý điều chuyển tài sản giữa các phòng ban, bộ phận.
-
-Theo dõi bảo trì, sửa chữa, thanh lý tài sản.
-
-Lưu trữ lịch sử sử dụng tài sản theo thời gian và người sử dụng.
-
-Thống kê, báo cáo số lượng, trạng thái và hiệu suất sử dụng tài sản.
+-Quản lý danh mục tài sản: loại tài sản, tình trạng, vị trí, nhà cung cấp.
+- Theo dõi quá trình cấp phát, mượn – trả tài sản trong đơn vị.
+- Quản lý điều chuyển tài sản giữa các phòng ban, bộ phận.
+- Theo dõi bảo trì, sửa chữa, thanh lý tài sản.
+- Lưu trữ lịch sử sử dụng tài sản theo thời gian và người sử dụng.
+- Thống kê, báo cáo số lượng, trạng thái và hiệu suất sử dụng tài sản.
 
 ⚙️ Phân hệ Quản lý Phòng họp
+- Quản lý danh sách phòng họp: tên phòng, sức chứa, vị trí, trạng thái sử dụng.
+- Hỗ trợ đặt phòng, mượn phòng theo khung thời gian, tránh trùng lịch.
+- Theo dõi lịch sử đặt phòng và sử dụng phòng họp.
+- Quản lý sự cố phòng họp, ghi nhận và xử lý tình trạng phát sinh.
+- Tự động gợi ý phòng họp trống khi phòng đang gặp sự cố hoặc bận.
+- Hỗ trợ check-in sử dụng phòng họp theo thực tế.
+- Thống kê, báo cáo tần suất và hiệu quả sử dụng phòng họp.
 
-Quản lý danh sách phòng họp: tên phòng, sức chứa, vị trí, trạng thái sử dụng.
+🔷 Phân hệ Quản lý Phòng họp
 
-Hỗ trợ đặt phòng, mượn phòng theo khung thời gian, tránh trùng lịch.
+Quản lý phòng họp như một loại tài sản dùng chung, tối ưu việc điều phối và sử dụng.
 
-Theo dõi lịch sử đặt phòng và sử dụng phòng họp.
+📌 Danh sách phòng họp
 
-Quản lý sự cố phòng họp, ghi nhận và xử lý tình trạng phát sinh.
+(Ảnh giao diện danh sách phòng họp)
 
-Tự động gợi ý phòng họp trống khi phòng đang gặp sự cố hoặc bận.
+Quản lý thông tin phòng: tên phòng, sức chứa, vị trí, trạng thái.
 
-Hỗ trợ check-in sử dụng phòng họp theo thực tế.
+Hỗ trợ thêm hình ảnh phòng họp trực quan.
 
-Thống kê, báo cáo tần suất và hiệu quả sử dụng phòng họp.
+📌 Đơn mượn / đặt phòng
+
+(Ảnh giao diện đơn mượn phòng)
+
+Đăng ký mượn phòng theo khung thời gian cụ thể.
+
+Tránh trùng lịch, đảm bảo sử dụng phòng hiệu quả.
+
+📌 Vị trí phòng họp
+
+(Ảnh giao diện vị trí phòng)
+
+Quản lý vị trí phòng theo tòa nhà, tầng, khu vực.
+
+Giúp người dùng dễ dàng xác định phòng họp.
+
+📌 Sự cố phòng họp
+
+(Ảnh giao diện sự cố phòng)
+
+Ghi nhận sự cố phát sinh trong quá trình sử dụng phòng.
+
+Phân loại mức độ và theo dõi trạng thái xử lý.
+
+📌 Gợi ý phòng họp trống
+
+(Ảnh popup gợi ý phòng)
+
+Tự động đề xuất phòng trống khi phòng đang sử dụng hoặc gặp sự cố.
+
+Hỗ trợ điều phối linh hoạt, không gián đoạn công việc.
+
+📌 Lịch sử đặt phòng & check-in
+
+(Ảnh lịch sử sử dụng phòng)
+
+Lưu lại toàn bộ lịch sử đặt và sử dụng phòng họp.
+
+Hỗ trợ check-in theo thời gian thực tế sử dụng.
+
+📌 Thống kê phòng họp
+
+(Ảnh thống kê phòng họp)
+
+Thống kê tần suất sử dụng phòng họp.
+
+Đánh giá hiệu quả khai thác phòng họp theo thời gian.
 
 
 ## ⚙️ 4. Cài đặt
