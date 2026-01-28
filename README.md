@@ -155,7 +155,9 @@ và xử lý sự cố kịp thời.
   </tr>
 </table>
 
+
 🏗️ Kiến trúc Hệ thống
+
 Hệ thống Quản lý Tài sản & Phòng họp được xây dựng theo kiến trúc Client – Server kết hợp mô hình MVC, phát triển trên nền tảng Odoo ERP mã nguồn mở.
 
 🔹 Tổng quan kiến trúc
@@ -187,13 +189,17 @@ Controller:
 
 #### 4.1.1. Tải project.
 ```
-git clone https://github.com/FIT-DNU/Business-Internship.git
+git clone https://github.com/Nguyenlong2004/TTDN-16-02-N11
 ```
 #### 4.1.2. Cài đặt các thư viện cần thiết
 Người sử dụng thực thi các lệnh sau đề cài đặt các thư viện cần thiết
 
-```
-sudo apt-get install libxml2-dev libxslt-dev libldap2-dev libsasl2-dev libssl-dev python3.10-distutils python3.10-dev build-essential libssl-dev libffi-dev zlib1g-dev python3.10-venv libpq-dev
+```sudo apt-get update
+sudo apt-get install -y \
+libxml2-dev libxslt-dev libldap2-dev libsasl2-dev libssl-dev \
+python3.10-distutils python3.10-dev build-essential \
+libffi-dev zlib1g-dev python3.10-venv libpq-dev
+
 ```
 #### 4.1.3. Khởi tạo môi trường ảo.
 - Khởi tạo môi trường ảo
@@ -233,10 +239,25 @@ python3 odoo-bin.py -c odoo.conf -u all
 ```
 Người sử dụng truy cập theo đường dẫn _http://localhost:8069/_ để đăng nhập vào hệ thống.
 
-## 📝 5. License
 
-© 2024 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
+## 📝 5. 
 
+📚 Nguồn tham khảo
+
+Dự án được nghiên cứu, tham khảo và kế thừa một phần ý tưởng, cấu trúc từ các tài nguyên sau:
+
+TTDN-15-03-N4 – Module Quản lý Phòng họp
+(Tham khảo cấu trúc module, mô hình dữ liệu và cách tổ chức chức năng)
+
+TTDN-15-01-N3 – Module Quản lý Tài sản
+(Tham khảo nghiệp vụ quản lý tài sản, quy trình mượn – trả, lịch sử và thống kê)
+(Nguồn tham khảo phục vụ học tập, nghiên cứu và phát triển hệ thống)
+
+📄 License
+
+© 2024 AIoTLab, Faculty of Information Technology, DaiNam University.
+Nhóm 11 thực hiện.
+All rights reserved.
 ---
 
     
