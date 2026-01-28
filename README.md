@@ -118,7 +118,7 @@ và xử lý sự cố kịp thời.
   <tr>
     <td width="50%" align="center">
       <b>🏷️ Danh sách Phòng họp</b><br/>
-      <img src="IMAGE_PHONG_1.png" width="100%"/><br/>
+      <img src="photo/Danh sách phòng họp.jpg" width="100%"/><br/>
       <i>Quản lý thông tin phòng họp, sức chứa, trạng thái</i>
     </td>
     <td width="50%" align="center">
