@@ -4,7 +4,7 @@
     </a>
 </h2>
 <h2 align="center">
-    PLATFORM ERP
+    Quản lý tài sản + Phòng họp
 </h2>
 <div align="center">
     <p align="center">
@@ -20,7 +20,8 @@
 </div>
 
 ## 📖 1. Giới thiệu
-Platform ERP được áp dụng vào học phần Thực tập doanh nghiệp dựa trên mã nguồn mở Odoo. 
+Nền tảng ERP của nhóm được phát triển dựa trên mã nguồn mở Odoo, phục vụ cho công tác đào tạo và thực hành tại Khoa Công nghệ Thông tin – Đại học Đại Nam.
+Hệ thống tích hợp các phân hệ quản lý tài sản, quản lý phòng họp như tài sản dùng chung, đáp ứng tốt nhu cầu thực tập doanh nghiệp, nghiên cứu học tập và mô phỏng triển khai thực tế.
 
 ## 🔧 2. Các công nghệ được sử dụng
 <div align="center">
@@ -36,11 +37,38 @@ Platform ERP được áp dụng vào học phần Thực tập doanh nghiệp d
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 </div>
 
-## 🚀 3. Các project đã thực hiện dựa trên Platform
+## 🚀 3. Các phân hệ chính
+⚙️ Phân hệ Quản lý Tài sản
 
-Một số project sinh viên đã thực hiện:
-- #### [Khoá 15](./docs/projects/K15/README.md)
-- #### [Khoá 16]() (Coming soon)
+Quản lý danh mục tài sản: loại tài sản, tình trạng, vị trí, nhà cung cấp.
+
+Theo dõi quá trình cấp phát, mượn – trả tài sản trong đơn vị.
+
+Quản lý điều chuyển tài sản giữa các phòng ban, bộ phận.
+
+Theo dõi bảo trì, sửa chữa, thanh lý tài sản.
+
+Lưu trữ lịch sử sử dụng tài sản theo thời gian và người sử dụng.
+
+Thống kê, báo cáo số lượng, trạng thái và hiệu suất sử dụng tài sản.
+
+⚙️ Phân hệ Quản lý Phòng họp
+
+Quản lý danh sách phòng họp: tên phòng, sức chứa, vị trí, trạng thái sử dụng.
+
+Hỗ trợ đặt phòng, mượn phòng theo khung thời gian, tránh trùng lịch.
+
+Theo dõi lịch sử đặt phòng và sử dụng phòng họp.
+
+Quản lý sự cố phòng họp, ghi nhận và xử lý tình trạng phát sinh.
+
+Tự động gợi ý phòng họp trống khi phòng đang gặp sự cố hoặc bận.
+
+Hỗ trợ check-in sử dụng phòng họp theo thực tế.
+
+Thống kê, báo cáo tần suất và hiệu quả sử dụng phòng họp.
+
+
 ## ⚙️ 4. Cài đặt
 
 ### 4.1. Cài đặt công cụ, môi trường và các thư viện cần thiết
