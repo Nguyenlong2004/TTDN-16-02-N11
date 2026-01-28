@@ -55,66 +55,101 @@ Hệ thống tích hợp các phân hệ quản lý tài sản, quản lý phòn
 - Hỗ trợ check-in sử dụng phòng họp theo thực tế.
 - Thống kê, báo cáo tần suất và hiệu quả sử dụng phòng họp.
 
-🔷 Phân hệ Quản lý Phòng họp
 
-Quản lý phòng họp như một loại tài sản dùng chung, tối ưu việc điều phối và sử dụng.
 
-📌 Danh sách phòng họp
+<h1 align="center">HỆ THỐNG QUẢN LÝ TÀI SẢN & PHÒNG HỌP</h1>
 
-(Ảnh giao diện danh sách phòng họp)
+<!-- ======================= -->
+<!-- PHÂN HỆ QUẢN LÝ TÀI SẢN -->
+<!-- ======================= -->
 
-Quản lý thông tin phòng: tên phòng, sức chứa, vị trí, trạng thái.
+<h2>Phân hệ Quản lý Tài sản</h2>
+<p>
+Phân hệ Quản lý Tài sản cho phép quản lý toàn diện vòng đời tài sản
+từ khâu mua sắm, cấp phát, sử dụng, bảo trì cho đến thanh lý và thống kê báo cáo.
+</p>
 
-Hỗ trợ thêm hình ảnh phòng họp trực quan.
+<table width="100%" cellpadding="12">
+  <tr>
+    <td width="50%" align="center">
+      <b>Danh sách Tài sản</b><br/>
+      <img src="IMAGE_TAISAN_1.png" width="100%"/><br/>
+      <i>Quản lý thông tin chi tiết từng tài sản</i>
+    </td>
+    <td width="50%" align="center">
+      <b>Quản lý Vị trí</b><br/>
+      <img src="IMAGE_TAISAN_2.png" width="100%"/><br/>
+      <i>Theo dõi vị trí, sơ đồ bố trí tài sản</i>
+    </td>
+  </tr>
 
-📌 Đơn mượn / đặt phòng
+  <tr>
+    <td width="50%" align="center">
+      <b>Mượn / Trả Tài sản</b><br/>
+      <img src="IMAGE_TAISAN_3.png" width="100%"/><br/>
+      <i>Quản lý quy trình mượn – trả tài sản</i>
+    </td>
+    <td width="50%" align="center">
+      <b>Thống kê & Báo cáo</b><br/>
+      <img src="IMAGE_TAISAN_4.png" width="100%"/><br/>
+      <i>Thống kê số lượng, trạng thái và hiệu quả sử dụng tài sản</i>
+    </td>
+  </tr>
+</table>
 
-(Ảnh giao diện đơn mượn phòng)
+<br/><hr/><br/>
 
-Đăng ký mượn phòng theo khung thời gian cụ thể.
+<!-- ======================= -->
+<!-- PHÂN HỆ QUẢN LÝ PHÒNG HỌP -->
+<!-- ======================= -->
 
-Tránh trùng lịch, đảm bảo sử dụng phòng hiệu quả.
+<h2>Phân hệ Quản lý Phòng họp</h2>
+<p>
+Phân hệ Quản lý Phòng họp hỗ trợ điều phối lịch sử dụng phòng họp
+như một tài sản dùng chung, đảm bảo sử dụng hiệu quả, tránh trùng lịch
+và xử lý sự cố kịp thời.
+</p>
 
-📌 Vị trí phòng họp
+<table width="100%" cellpadding="12">
+  <tr>
+    <td width="50%" align="center">
+      <b>Danh sách Phòng họp</b><br/>
+      <img src="IMAGE_PHONG_1.png" width="100%"/><br/>
+      <i>Quản lý thông tin phòng họp, sức chứa, trạng thái</i>
+    </td>
+    <td width="50%" align="center">
+      <b>Vị trí Phòng họp</b><br/>
+      <img src="IMAGE_PHONG_2.png" width="100%"/><br/>
+      <i>Xác định vị trí phòng theo tòa nhà, tầng</i>
+    </td>
+  </tr>
 
-(Ảnh giao diện vị trí phòng)
+  <tr>
+    <td width="50%" align="center">
+      <b>Đơn Mượn / Đặt Phòng</b><br/>
+      <img src="IMAGE_PHONG_3.png" width="100%"/><br/>
+      <i>Đăng ký, phê duyệt và quản lý thời gian sử dụng phòng</i>
+    </td>
+    <td width="50%" align="center">
+      <b>Lịch sử Đặt Phòng</b><br/>
+      <img src="IMAGE_PHONG_4.png" width="100%"/><br/>
+      <i>Theo dõi lịch sử sử dụng phòng họp theo thời gian</i>
+    </td>
+  </tr>
 
-Quản lý vị trí phòng theo tòa nhà, tầng, khu vực.
-
-Giúp người dùng dễ dàng xác định phòng họp.
-
-📌 Sự cố phòng họp
-
-(Ảnh giao diện sự cố phòng)
-
-Ghi nhận sự cố phát sinh trong quá trình sử dụng phòng.
-
-Phân loại mức độ và theo dõi trạng thái xử lý.
-
-📌 Gợi ý phòng họp trống
-
-(Ảnh popup gợi ý phòng)
-
-Tự động đề xuất phòng trống khi phòng đang sử dụng hoặc gặp sự cố.
-
-Hỗ trợ điều phối linh hoạt, không gián đoạn công việc.
-
-📌 Lịch sử đặt phòng & check-in
-
-(Ảnh lịch sử sử dụng phòng)
-
-Lưu lại toàn bộ lịch sử đặt và sử dụng phòng họp.
-
-Hỗ trợ check-in theo thời gian thực tế sử dụng.
-
-📌 Thống kê phòng họp
-
-(Ảnh thống kê phòng họp)
-
-Thống kê tần suất sử dụng phòng họp.
-
-Đánh giá hiệu quả khai thác phòng họp theo thời gian.
-
+  <tr>
+    <td width="50%" align="center">
+      <b>Sự cố Phòng họp</b><br/>
+      <img src="IMAGE_PHONG_5.png" width="100%"/><br/>
+      <i>Ghi nhận sự cố và gợi ý phòng trống thay thế</i>
+    </td>
+    <td width="50%" align="center">
+      <b>Thống kê Phòng họp</b><br/>
+      <img src="IMAGE_PHONG_6.png" width="100%"/><br/>
+      <i>Thống kê tần suất sử dụng và hiệu quả khai thác phòng</i>
+    </td>
+  </tr>
+</table>
 
 ## ⚙️ 4. Cài đặt
 
