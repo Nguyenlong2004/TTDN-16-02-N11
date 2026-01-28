@@ -76,12 +76,12 @@ từ khâu mua sắm, cấp phát, sử dụng, bảo trì cho đến thanh lý 
 <table width="100%" cellpadding="12">
   <tr>
     <td width="50%" align="center">
-      <b>📋 Danh sách Tài sản</b><br/>
+      <b>📋 Quản lí Tài sản</b><br/>
       <img src="IMAGE_TAISAN_1.png" width="100%"/><br/>
       <i>Quản lý thông tin chi tiết từng tài sản</i>
     </td>
     <td width="50%" align="center">
-      <b>📍 Quản lý Vị trí</b><br/>
+      <b>📍 Loại tài sản </b><br/>
       <img src="IMAGE_TAISAN_2.png" width="100%"/><br/>
       <i>Theo dõi vị trí, sơ đồ bố trí tài sản</i>
     </td>
