@@ -77,12 +77,12 @@ từ khâu mua sắm, cấp phát, sử dụng, bảo trì cho đến thanh lý 
   <tr>
     <td width="50%" align="center">
       <b>📋 Quản lí Tài sản</b><br/>
-      <img src="Quản lí tài sản.jpg" width="100%"/><br/>
+      <img src="photo/Quản lí tài sản.jpg" width="100%"/><br/>
       <i>Quản lý thông tin chi tiết từng tài sản</i>
     </td>
     <td width="50%" align="center">
       <b>📍 Loại tài sản </b><br/>
-      <img src="IMAGE_TAISAN_2.png" width="100%"/><br/>
+      <img src="photo/Loại tài sản.jpg" width="100%"/><br/>
       <i>Theo dõi vị trí, sơ đồ bố trí tài sản</i>
     </td>
   </tr>
@@ -90,12 +90,12 @@ từ khâu mua sắm, cấp phát, sử dụng, bảo trì cho đến thanh lý 
   <tr>
     <td width="50%" align="center">
       <b>🤝 Mượn / Trả Tài sản</b><br/>
-      <img src="IMAGE_TAISAN_3.png" width="100%"/><br/>
+      <img src="photo/mượn trả tài sản.jpg" width="100%"/><br/>
       <i>Quản lý quy trình mượn – trả tài sản</i>
     </td>
     <td width="50%" align="center">
       <b>📊 Thống kê & Báo cáo</b><br/>
-      <img src="IMAGE_TAISAN_4.png" width="100%"/><br/>
+      <img src="photo/thống kêêbaso cáo.jpg" width="100%"/><br/>
       <i>Thống kê số lượng, trạng thái và hiệu quả sử dụng tài sản</i>
     </td>
   </tr>
@@ -123,7 +123,7 @@ và xử lý sự cố kịp thời.
     </td>
     <td width="50%" align="center">
       <b>📍 Vị trí Phòng họp</b><br/>
-      <img src="IMAGE_PHONG_2.png" width="100%"/><br/>
+      <img src="photo/vi tri phòng họp.jpg" width="100%"/><br/>
       <i>Xác định vị trí phòng theo tòa nhà, tầng</i>
     </td>
   </tr>
@@ -131,12 +131,12 @@ và xử lý sự cố kịp thời.
   <tr>
     <td width="50%" align="center">
       <b>📝 Đơn Mượn / Đặt Phòng</b><br/>
-      <img src="IMAGE_PHONG_3.png" width="100%"/><br/>
+      <img src="photo/Đơn mượn đặt phòng.jpg" width="100%"/><br/>
       <i>Đăng ký, phê duyệt và quản lý thời gian sử dụng phòng</i>
     </td>
     <td width="50%" align="center">
       <b>🕒 Lịch sử Đặt Phòng</b><br/>
-      <img src="IMAGE_PHONG_4.png" width="100%"/><br/>
+      <img src="photo/Lịch  sử đặt  phòng.jpg" width="100%"/><br/>
       <i>Theo dõi lịch sử sử dụng phòng họp theo thời gian</i>
     </td>
   </tr>
@@ -144,12 +144,12 @@ và xử lý sự cố kịp thời.
   <tr>
     <td width="50%" align="center">
       <b>⚠️ Sự cố Phòng họp</b><br/>
-      <img src="IMAGE_PHONG_5.png" width="100%"/><br/>
+      <img src="photo/Sự cố phòng họp.jpg" width="100%"/><br/>
       <i>Ghi nhận sự cố và gợi ý phòng trống thay thế</i>
     </td>
     <td width="50%" align="center">
       <b>📈 Thống kê Phòng họp</b><br/>
-      <img src="IMAGE_PHONG_6.png" width="100%"/><br/>
+      <img src="photo/thống kê phòng họp.jpg" width="100%"/><br/>
       <i>Thống kê tần suất sử dụng và hiệu quả khai thác phòng</i>
     </td>
   </tr>
