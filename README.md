@@ -77,7 +77,8 @@ từ khâu mua sắm, cấp phát, sử dụng, bảo trì cho đến thanh lý 
   <tr>
     <td width="50%" align="center">
       <b>📋 Quản lí Tài sản</b><br/>
-      <img src="IMAGE_TAISAN_1.png" width="100%"/><br/>
+      <img src="![Quản lí tài sản](https://github.com/user-attachments/assets/d04e4085-1ef2-46a6-b731-8270741feae1)
+" width="100%"/><br/>
       <i>Quản lý thông tin chi tiết từng tài sản</i>
     </td>
     <td width="50%" align="center">
