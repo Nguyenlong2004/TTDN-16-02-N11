@@ -14,18 +14,18 @@ services:
     ports:
       - "5431:5432"
 
-  odoo15:
-    container_name: odoo15
-    image: odoo:15
-    depends_on:
-      - postgres-odoo-base-15-01
-    ports:
-      - "8069:8069"
-    volumes:
-      - ./addons:/mnt/extra-addons
-      - ./odoo.conf:/etc/odoo/odoo.conf
-    environment:
-      - HOST=postgres-odoo-base-15-01
-      - USER=odoo
-      - PASSWORD=odoo
+  # odoo15:
+  #   container_name: odoo15
+  #   image: odoo:15
+  #   depends_on:
+  #     - postgres-odoo-base-15-01
+  #   ports:
+  #     - "8069:8069"
+  #   volumes:
+  #     - ./addons:/mnt/extra-addons
+  #     - ./odoo.conf:/etc/odoo/odoo.conf
+  #   environment:
+  #     - HOST=postgres-odoo-base-15-01
+  #     - USER=odoo
+  #     - PASSWORD=odoo
 
