@@ -169,12 +169,10 @@ Người dùng truy cập hệ thống thông qua trình duyệt web. Giao diệ
 - Sử dụng PostgreSQL để lưu trữ dữ liệu tài sản, phòng họp, lịch sử mượn – trả, bảo trì, thống kê và báo cáo.
 
 🔹 Mô hình MVC trong hệ thống
-Model:
-- Quản lý dữ liệu và nghiệp vụ (tài sản, phòng họp, lịch sử sử dụng, thống kê…).
-View:
-- Giao diện hiển thị dữ liệu cho người dùng (danh sách, form, báo cáo, biểu đồ).
-Controller:
-- Điều phối luồng xử lý giữa Model và View, tiếp nhận yêu cầu từ người dùng.
+
+Model:Quản lý dữ liệu và nghiệp vụ (tài sản, phòng họp, lịch sử sử dụng, thống kê…).
+View:Giao diện hiển thị dữ liệu cho người dùng (danh sách, form, báo cáo, biểu đồ).
+Controller:Điều phối luồng xử lý giữa Model và View, tiếp nhận yêu cầu từ người dùng.
 
 🔹 Ưu điểm kiến trúc
 - Dễ mở rộng, dễ tích hợp thêm module mới
@@ -241,7 +239,6 @@ Người sử dụng truy cập theo đường dẫn _http://localhost:8069/_ đ
 
 
 ## 📝 5. 
-
 📚 Nguồn tham khảo
 
 Dự án được nghiên cứu, tham khảo và kế thừa một phần ý tưởng, cấu trúc từ các tài nguyên sau:
